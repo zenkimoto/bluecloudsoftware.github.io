@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tetris Clone</title>
+    <style>
+        body {
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #1a1a1a;
+            font-family: Arial, sans-serif;
+        }
+        #game-container {
+            margin-top: 20px;
+            display: flex;
+            gap: 20px;
+            display: none; /* Hide initially */
+        }
+        canvas {
+            border: 2px solid #333;
+            background-color: #000;
+        }
+        #score {
+            color: #fff;
+            font-size: 24px;
+            margin-top: 20px;
+            display: none; /* Hide initially */
+        }
+        #controls {
+            color: #fff;
+            margin-top: 20px;
+            text-align: center;
+            display: none; /* Hide initially */
+        }
+        #start-button {
+            font-size: 24px;
+            padding: 15px 30px;
+            margin-top: 30px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        #start-button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="color: #fff;">Tetris</h1>
+    <button id="start-button">Start Game with Music</button>
+    <div id="game-container">
+        <canvas id="gameCanvas" width="300" height="600"></canvas>
+        <canvas id="nextCanvas" width="120" height="120"></canvas>
+    </div>
+    <div id="score">Score: 0</div>
+    <div id="controls">
+        <p>Controls:</p>
+        <p>← → : Move left/right</p>
+        <p>↑ : Rotate</p>
+        <p>↓ : Move down faster</p>
+        <p>Space : Drop instantly</p>
+    </div>
+    <script src="tetris.js"></script>
+</body>
+</html> 
